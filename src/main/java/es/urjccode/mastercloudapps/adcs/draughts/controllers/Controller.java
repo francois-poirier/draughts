@@ -17,7 +17,7 @@ public abstract class Controller {
 	}
 
 	public int getDimension() {
-		return this.session.getDimension();
+		return this.session.game.getDimension();
 	}
 
 	abstract public void accept(ControllersVisitor controllersVisitor);

@@ -15,10 +15,4 @@ public class Session {
 		return this.state.getValueState();
 	}
 
-	public int getDimension() {
-		return this.game.getDimension();
-	}
-
-	
-
 }
