@@ -2,21 +2,22 @@ package es.urjccode.mastercloudapps.adcs.draughts.models;
 
 public class Session {
 
-	private State state;
+	public State state;
 
-	private Game game;
+	public Game game;
 
 	public Session(){
 		this.state = new State();
 		this.game = new Game();
 	}
+	
 	public StateValue getValueState() {
 		return this.state.getValueState();
 	}
 
-	public void next() {
-		this.state.next();
-	}
+	/*
+	 * public void next() { this.state.next(); }
+	 */
 
 	public void reset() {
 		this.state.reset();
