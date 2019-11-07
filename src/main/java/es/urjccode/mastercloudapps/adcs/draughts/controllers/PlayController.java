@@ -13,7 +13,7 @@ public class PlayController extends Controller {
 	}
 
 	public Error move(Coordinate origin, Coordinate target){
-		Error error = this.session.move(origin, target);
+		Error error = this.session.game.move(origin, target);
 		if (this.session.isBlocked()){
 			this.session.state.next();
 		}

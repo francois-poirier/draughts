@@ -22,11 +22,10 @@ public class Session {
 	/*
 	 * public void reset() { this.state.reset(); }
 	 */
-
-	public Error move(Coordinate origin, Coordinate target) {
-		return this.game.move(origin, target);
-	}
-
+	/*
+	 * public Error move(Coordinate origin, Coordinate target) { return
+	 * this.game.move(origin, target); }
+	 */
 	public Piece getPiece(Coordinate coordinate) {
 		return this.game.getPiece(coordinate);
 	}
