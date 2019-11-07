@@ -11,8 +11,4 @@ public class Session {
 		this.game = new Game();
 	}
 	
-	public StateValue getValueState() {
-		return this.state.getValueState();
-	}
-
 }
