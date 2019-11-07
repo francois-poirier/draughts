@@ -19,9 +19,9 @@ public class Session {
 	 * public void next() { this.state.next(); }
 	 */
 
-	public void reset() {
-		this.state.reset();
-	}
+	/*
+	 * public void reset() { this.state.reset(); }
+	 */
 
 	public Error move(Coordinate origin, Coordinate target) {
 		return this.game.move(origin, target);
