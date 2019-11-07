@@ -14,7 +14,7 @@ public class PlayController extends Controller {
 
 	public Error move(Coordinate origin, Coordinate target){
 		Error error = this.session.game.move(origin, target);
-		if (this.session.isBlocked()){
+		if (this.session.game.isBlocked()){
 			this.session.state.next();
 		}
 		return error;
@@ -29,7 +29,7 @@ public class PlayController extends Controller {
 	}
 	
 	public boolean isBlocked() {
-		return session.isBlocked();
+		return session.game.isBlocked();
 	}	
 
 	@Override

@@ -15,10 +15,6 @@ public class Session {
 		return this.state.getValueState();
 	}
 
-	public boolean isBlocked() {
-		return this.game.isBlocked();
-	}
-
 	public int getDimension() {
 		return this.game.getDimension();
 	}
