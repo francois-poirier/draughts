@@ -22,8 +22,8 @@ public class PlayView extends SubView {
             int target = Integer.parseInt(command.substring(3, 5));
             error = playController.move(new Coordinate(origin/10-1, origin%10-1), new Coordinate(target/10-1, target%10-1));
             if (error != null){
-                console.writeln("Error!!!" + error.name());
-            gameView.write(playController);
+            	error.writeln();
+                gameView.write(playController);
             }
         } while (error != null); 
         if (playController.isBlocked()){
