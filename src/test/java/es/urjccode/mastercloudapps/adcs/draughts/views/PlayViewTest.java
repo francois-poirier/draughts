@@ -40,5 +40,13 @@ public class PlayViewTest {
         playView.interact(playController);
         verify(playController).move(new Coordinate(2,1), new Coordinate(3, 0));
     }
+    
+    @Test
+    public void testInteractOuterCoordinate(){
+        when(playController.getColor()).thenReturn(Color.BLACK);
+        when(console.readString("Mueven las negras: ")).thenReturn("08.08\n").thenReturn("32.41\n");
+        playView.interact(playController);
+        verify(playController).move(new Coordinate(2,1), new Coordinate(3, 0));
+    }
 
 }
