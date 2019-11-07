@@ -15,10 +15,6 @@ public class Session {
 		return this.state.getValueState();
 	}
 
-	public Color getColor(Coordinate coordinate) {
-		return this.game.getColor(coordinate);
-	}
-
 	public boolean isBlocked() {
 		return this.game.isBlocked();
 	}
