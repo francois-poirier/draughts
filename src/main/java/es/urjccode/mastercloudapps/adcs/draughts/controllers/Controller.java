@@ -12,8 +12,8 @@ public abstract class Controller {
     protected State state;
     
     protected Controller(Game game, State state) {
-        this.game = new Game();
-        this.state = new State();
+        this.game = game;
+        this.state = state;
     }
 
     public Color getColor(Coordinate coordinate) {

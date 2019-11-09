@@ -1,7 +1,5 @@
 package es.urjccode.mastercloudapps.adcs.draughts.models;
 
-import es.urjccode.mastercloudapps.adcs.draughts.utils.Console;
-
 public enum Error {
 	
     OUT_COORDINATE("No es una coordenada del tablero"), 
@@ -19,8 +17,6 @@ public enum Error {
 	
     private String error;
     
-	private static Console console = new Console();
-	
     Error(String error) {
         this.error = error;
     }
@@ -29,11 +25,4 @@ public enum Error {
         return error;
     }
     
-	public void write() {
-		Error.console.write("Error!!! " + this.error);
-	}
-	
-	public void writeln() {
-		Error.console.writeln("Error!!! " + this.error);
-	}
 }
