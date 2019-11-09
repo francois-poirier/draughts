@@ -71,13 +71,6 @@ public class GameTest {
     }
 
     @Test
-    public void testGivenGameWhenNotDiagonalMovementThenError() {
-        assertEquals(Error.NOT_DIAGONAL, this.advance(new Coordinate[][] { 
-            { new Coordinate(5, 2), new Coordinate(4, 2) },
-        }));
-    }
-
-    @Test
     public void testGivenGameWhenMoveWithNotAdvancedThenError() {
         assertEquals(Error.NOT_ADVANCED, this.advance(new Coordinate[][] { 
             { new Coordinate(5, 6), new Coordinate(4, 7) },
@@ -133,11 +126,5 @@ public class GameTest {
         })); 
     }
 
-    @Test
-    public void testGivenGameWhenMoveBadDistanceThenError() {
-        assertEquals(Error.BAD_DISTANCE, this.advance(new Coordinate[][] { 
-            { new Coordinate(5, 0), new Coordinate(2, 3) },
-        })); 
-    }
 
 }

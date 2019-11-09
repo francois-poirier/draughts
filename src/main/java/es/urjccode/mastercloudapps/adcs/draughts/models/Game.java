@@ -46,15 +46,18 @@ public class Game {
 		if (this.turn.getColor() != color) {
 			return Error.OPPOSITE_PIECE;
 		}
-		if (!origin.isDiagonal(target)) {
-			return Error.NOT_DIAGONAL;
-		}
 		Piece piece = this.board.getPiece(origin);
-		if (!piece.isAdvanced(origin, target)) {
-			return Error.NOT_ADVANCED;
+		Error error = piece.isDiagonal(origin, target);
+		if (error!=null) {
+			return error;
 		}
-		if (origin.diagonalDistance(target) >= 3) {
-			return Error.BAD_DISTANCE;
+		error = piece.isAdvanced(origin, target);
+		if (error!=null) {
+			return error;
+		}
+		error = piece.diagonalDistance(origin, target);
+		if (error!=null) {
+			return error;
 		}
 		if (!this.board.isEmpty(target)) {
 			return Error.NOT_EMPTY_TARGET;
