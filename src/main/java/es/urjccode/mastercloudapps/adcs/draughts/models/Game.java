@@ -47,15 +47,7 @@ public class Game {
 			return Error.OPPOSITE_PIECE;
 		}
 		Piece piece = this.board.getPiece(origin);
-		Error error = piece.isDiagonal(origin, target);
-		if (error!=null) {
-			return error;
-		}
-		error = piece.isAdvanced(origin, target);
-		if (error!=null) {
-			return error;
-		}
-		error = piece.diagonalDistance(origin, target);
+		Error error = piece.isValidMovement(origin, target);
 		if (error!=null) {
 			return error;
 		}
